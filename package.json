@@ -1,6 +1,6 @@
 {
   "name": "gags",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "track and funnify your workout like a boss",
   "main": "app.js",
   "dependencies": {
@@ -31,6 +31,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/fuccac/Fitness.git"
+    "url": "git://github.com/fuccac/Gags.git"
   }
 }
