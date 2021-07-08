@@ -1,0 +1,714 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+	<title>FitnessApp</title>
+</head>
+
+
+<body>
+	<link rel="stylesheet" href="style.css" />
+
+	<div id="div_login">
+		<h1>Welcome to <b>GAGS</b> (Geile App zum gemeinsamen Sporteln)</h1> <br><br>
+		<label for="input_Username">Name:</label>
+		<br><input id="input_Username" type="text" placeholder="Username"></input><br>
+		<label for="input_Password">Passwort:</label>
+		<br><input id="input_Password" type="password" placeholder="Passwort"></input><br><br>
+		<button id="button_SignIn">Anmelden</button>
+		<button id="button_SignUp">Registrieren</button>
+		<br><br>
+		<label for="input_RememberMe">Login merken</label>
+		<input id="input_RememberMe" type="checkbox"></input>
+
+		<hr>
+
+		<div id="div_changeLog" class="changelog">
+			<p class="MOTD">
+				MOTD: Happy Training! 
+			</p>
+			<p>
+				NEWS (08.07.2021) v1.89:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Diverse Separator eingefügt für bessere "Visuals".
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Erfolgspunktesystem eingeführt. (Verdient mit Erfolgen)
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Erste Testversion der Challenges eingeführt.
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>"Login Merken" funktioniert nun wie es soll.
+				</li>
+				<li>
+					<b>Usability: </b> Diverse CSS Anpassungen
+				</li>
+				
+			</p>
+			<p>
+				NEWS (24.06.2020) v1.88:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Was man bis zum Powerfactorcheck noch tun muss steht nun in einer eigenen Spalte auf der Übersicht.
+				</li>
+			</p>
+			<p>
+				NEWS (26.05.2020) v1.87:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Season Wins werden anerkannt!
+				</li>
+			</p>
+			<p>
+				NEWS (04.12.2019) v1.86:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Neue Anzeigefunktion: 0-Punkte Accounts werden ausgeblendet. <br>
+					<BLOCKQUOTE>Wenn Letzte 5 Tage 0 ist gilt man als "inaktiv". <br>
+						Wenn Letzte 5 Tage >= 1500 ist wird man BLAU markiert. <br>
+						Wenn Letzte 5 Tage >=2500 ist wird man LILA markiert. <br>
+					</BLOCKQUOTE>
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Löschbutton funktioniert wieder in einer anderen Zeitzone.
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Paceberechnungen ohne Berechnungsmethode funktionieren wieder richtig.
+				</li>
+			</p>
+			<p>
+				NEWS (27.11.2019) v1.85:
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Gelöschte Übungen können keine Double Time Übungen mehr sein.
+				</li>
+			</p>
+			<p>
+				NEWS (12.11.2019) v1.84:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Neue Berechnungsmethoden und "Auf einmal" Funktion (Checkbox) falls eine "#" Berechnungsmethode hinterlegt ist. Aktiviere die Checkbox, wenn die Übung hintereinander abgeschlossen wurde.
+				</li>
+			</p>
+			<p>
+				NEWS (06.11.2019) v1.83:
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Achievementlisten Bug bei mehr als 1 Person online.
+				</li>
+			</p>
+			<p>
+				NEWS (05.11.2019) v1.82:
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Namen müssen mindestens 3 Zeichen haben.
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Refresh Anzeige.
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Berechnungsmethoden für individuelle Übungsberechnung
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Übungskommentare werden nach Youtube Links untersucht und in die Tabelle eingebettet.
+				</li>
+			</p>
+			<p>
+				NEWS (31.10.2019) v1.81:
+				<li>
+					<span class="changeLog_Feature">RESET: </span>Alles wurde zurückgesetzt.
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Online Liste zeigt live an wer gerade Online ist.
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Achievement Maker: Achievements können (von mir)
+					ohne Serverneustart hinzugefügt werden.
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Diverse Bugs behoben, welche einen Betrieb ohne Initial Save
+					Files unmöglich machen.
+				</li>
+			</p>
+			<p>
+				NEWS (01.10.2019) v1.80:
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Anmeldung nicht möglich, falls eine weitere Instanz der App
+					mit dem selben Namen angemeldet ist.
+				</li>
+			</p>
+			<p>
+				NEWS (01.08.2019) v1.79:
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Die ausgeblendeten Übungen werden ordnungsgemäß
+					ausgeblendet.
+				</li>
+			</p>
+			<p>
+				NEWS (29.07.2019) v1.78:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Double Time: Jeden Tag wird eine neue Übung
+					ausgewählt, welche dann doppelt zählt!
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Neues Diagramm: Gruppenpunkte
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Profilseite wurde eingerichtet - dort wählt man
+					Profiltechnische Dinge aus.
+				</li>
+				<li>
+					<b>Usability: </b>Bessere Eventlogperformance und mehr Logspeicher
+
+				</li>
+				<li>
+					<b>Usability: </b>Manche Nachrichten im Eventlog werden ROT markiert für bessere Übersicht.
+				</li>
+				<li>
+					<b>Usability: </b>Persönliche Farbauswahl
+				</li>
+				<li>
+					<b>Usability: </b>Anzeige für kleinere Displays mittlels dynamischem CSS lesbarer gemacht.
+
+				</li>
+				<li>
+					<b>Usability: </b>Eventlog wurde erweitert um 3 Monate und serverseitig generiert.
+
+				</li>
+
+			</p>
+			<p>
+				NEWS (17.07.2019) v1.76:
+
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Einheitensystem erweitert
+					(min/km,min/m,Wdh/min,Wdh/sec) - für mehr Info Ing. Fuchs direkt ansprechen.
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Neues Diagramm im Statistik Tab
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Neue Buttons in Tab Übungen: "Ausblenden" und "Zeige
+					alle". Damit blendet man Übungen die uninteressant sind aus.
+				</li>
+				<li>
+					<b>Usability: </b>Löschen von eingetragenen Übungen funktioniert jetzt anders - Benutzerfreundlicher
+					mit einem "BIG DELETE BUTTON" in der Zeile.
+
+				</li>
+				<li>
+					<b>Usability: </b>Markierte Übungen werden anschaulicher markiert.
+
+				</li>
+				<li>
+					<b>Usability: </b>Übungstabelle wird serverseitig vorsortiert und anders generiert - bessere
+					Performance (150ms statt 900ms)
+				</li>
+				<li>
+					<b>Usability: </b>Niemand liest dieses Changelog - aber Hauptsache deppat fragen.
+				</li>
+
+			</p>
+			<p>
+				NEWS (08.07.2019) v1.71:
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Das Namesfeld im Historytab wird wieder ordnunggemäß
+					befüllt.
+				</li>
+			</p>
+			<p>
+				NEWS (04.07.2019) v1.68:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>"Login merken" funktioniert nun wie geplant. <-
+						FUNKTIONIERT NICHT </li> </p> <p>
+
+						NEWS (03.07.2019) v1.67:
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Notfallfix - Manchmal crashed der Server beim entfernen der
+					letzten Übung eines Tages.
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Falsche Berechnung Tagesdiagramm (Cardio, Kraft)
+				</li>
+				<li>
+					<b>Sonstiges: </b>Usersavefilesänderung - keine Punkte mehr in persönlichen Savefiles speichern.
+				</li>
+			</p>
+			<p>
+				NEWS (02.07.2019) v1.64:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Neues Diagramm: Tagesdaten (Linie)
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Cardio/Stärke Prozentuelle Aufteilung - Player Daten
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Um eine bereits gemachte Übung nochmal zu machen,
+					kann man sie in der History einfach anklicken und die Boxen werden befüllt.
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Markierungsindikation: Die Übung die für die
+					Bearbeitung ausgewählt ist wird ROT markiert in der Übungsliste.
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Der heutige Tag wurde im Graph abgeschnitten - korrigiert.
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Tage an denen NIEMAND etwas eingetragen haben werden nun im
+					Graph korrekt angezeigt
+				</li>
+
+				<li>
+					<b>Usability: </b>Standardauswahl beim Diagramm: "Alles", anstatt "Cardio", um Verwirrungen zu
+					vermeiden.
+				</li>
+				<li>
+					<b>Usability: </b>Diagrammkontrolle aufgeräumt - Dropdown statt Checkbox. Vorbereitet für zukünftige
+					Diagramme.
+				</li>
+				<li>
+					<b>Usability: </b>Hervorhebung der HEUTIGEN Punktzahl
+				</li>
+				<li>
+					<b>Sonstiges: </b>Unnütze On-Click Events entfernt..
+				</li>
+				<li>
+					<b>Sonstiges: </b>Changelog Neugestaltung
+				</li>
+			</p>
+			<p>
+				NEWS (28.06.2019) v1.63:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Eventlog - Minimalistischer Chat
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Monatssiege
+				</li>
+				<li>
+					<b>Usability: </b>Chart Handling massiv optimiert - Cardio und Kraft Einteilung. Mehr
+					Nutzerfreundlichkeit, Button
+					entfernt.
+				</li>
+				<li>
+					<b>Sonstiges: </b>Nur noch 1 JSON File für alles. (Weniger Uploads, weniger Fehleranfällig)
+				</li>
+			</p>
+			<p>
+				NEWS (26.06.2019) v1.62:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Mehr Statistiken auf Erfolgseite
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>User-Save-Files werden ordnungsgemäß geladen. (Die wurden
+					nur gepeichert bis jetzt - Hab die LoadUser
+					Funktion vergessen.)
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Monatsdurchschnitt wird korrekt berechnet.
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Monatsbestleistung wird korrekt berechnet.
+				</li>
+				<li>
+					<b>Sonstiges: </b>Hunderte Zeilen Useless-Code entfernt. Nur mehr eine Refreshfunktion, statt 1000.
+					Es sollte alles was
+					Save-Files verändert zügiger ablaufen.
+				</li>
+				<li>
+					<b>Sonstiges: </b>Achievements bekommen eigenes Save-File
+				</li>
+			</p>
+			<p>
+				NEWS (21.06.2019) v1.61:
+				<li>
+					<b>Sonstiges: </b>Eventlog - Savefile Unterstützung - Maximal 50 Lines of Events
+				</li>
+			</p>
+			<p>
+				NEWS (19.06.2019) v1.60:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Erfolge für Tägliche, Monatliche und Gesamtpunkte
+					erweitert (Mehr Levels)
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Event Tab (Button Events), Sie an was die anderen
+					gemacht haben
+				</li>
+				<li>
+					<span class="changeLog_Bug">Bug: </span>Bugfixes die sowieso nur i mitkrieg
+				</li>
+
+			</p>
+			<p>
+				NEWS (18.06.2019) v1.59:
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Erfolge für Tägliche, Monatliche und Gesamtpunkte
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Erfolge für Tagessiege
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Balkendiagramm: Nutze die Checkbox auf der
+					Hauptseite!
+				</li>
+				<li>
+					<span class="changeLog_Feature">Feature: </span>Seite "Siege" - dort finden sich Tagessiege!
+				</li>
+			</p>
+		</div>
+	</div>
+	<div id="div_MainPage" class="tab">
+		<div id="div_allPlayersTable">
+			<table id="table_allPlayersTable" class="std_table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<hr>
+		<div id="div_graph">
+
+		</div>
+		<hr>
+		<div id="div_GraphControl">
+			<br>
+			<label for="input_graphFromDate">Von :</label>
+			<input id="input_graphFromDate" type="date"></input>
+			<label for="input_graphToDate">Bis :</label>
+			<input id="input_graphToDate" type="date"></input><br>
+
+			<label for="input_graphSwitch">Diagrammtyp</label>
+			<select id="select_graphSwitch">
+				<optgroup label="Gesamtpunktediagramme">
+					<option value="line">Liniendiagramm</option>
+					<option value="bar">Balkendiagramm</option>
+				</optgroup>
+				<optgroup label="Tagespunktediagramme">
+					<option value="line-day">Liniendiagramm</option>
+					<option value="line-day-group">Liniengruppendiagramm</option>
+				</optgroup>
+			</select><br>
+			<label for="select_chartType">Datenauswahl</label>
+			<select id="select_chartType">
+				<option value="all">Alles</option>
+				<option value="cardio">Cardio</option>
+				<option value="strength">Kraft</option>
+			</select>
+
+		</div>
+	</div>
+
+
+	<div id="div_PersonalOverview" class="tab">
+		<div id="div_PersonalInfo">
+			<div id="div_personalTable">
+				<table id="table_personalTable" class="std_table">
+					<thead></thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<div id="div_addWorkout">
+			<label for="input_doneExerciseDate">Übung Datum:</label>
+			<input id="input_doneExerciseDate" type="date" class="addWorkOut"></input><br>
+			<label for="select_doneExercise">Übung:</label>
+			<select id="select_doneExercise" class="addWorkOut"></select><br>
+			<label for="input_doneExercise">Übung Anzahl:</label>
+			<input id="input_doneExercise" class="addWorkOut" type="number" min="0" step="0.01" placeholder="Anzahl"
+				oninput="validity.valid||(value='');"></input>
+			<input id="input_doneExerciseAdditional" class="addWorkOut" type="number" min="0" step="0.01"
+				placeholder="Anzahl Zusatz" oninput="validity.valid||(value='');" disabled="true"></input><br>
+				<label for="input_atOnce" class="checkboxLabel">Auf einmal?</label>
+				
+				<input id="input_atOnce" type="checkbox" class="addWorkOut checkboxLabel" checked="false"></input>
+				
+				
+				<br>
+			<label for="input_doneExerciseWeight">Übung Gewicht [kg]:</label>
+			<input id="input_doneExerciseWeight" class="addWorkOut" pattern="[0-9]+([\.,][0-9]+)?" step="0.1"
+				type="number" placeholder="Benutzes Gewicht" min="0" oninput="validity.valid||(value='');"></input><br>
+			<button id="button_doneExerciseSend">Anlegen</button>
+		</div>
+		<hr>
+		<div id="div_exerciseHistoryControl">
+			<label for="select_historyShowName">Name:</label>
+			<select id="select_historyShowName"></select><br>
+			<label for="input_historyFromDate">Von:</label>
+			<input id="input_historyFromDate" type="date"></input>
+			<label for="input_historyToDate">Bis:</label>
+			<input id="input_historyToDate" type="date"></input>
+			<label for="input_sumSelection">Summe Auswahl:</label>
+			<input id="input_sumSelection" type="text" placeholder="Auswertung starten..." disabled></input>
+			<label for="input_avgSelection">Mittlw. Auswahl:</label>
+			<input id="input_avgSelection" type="text" placeholder="Auswertung starten..." disabled></input><br>
+			<button id="button_updateHistory">Update</button><br>
+		</div>
+		<hr>
+		<div id="div_exerciseHistory">
+			<table id="table_exerciseHistory" class="std_table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+	<div id="div_ExerciseOverview" class="tab">
+		<p id="paragraph_paceUnitNotice"></p>
+		<div id="div_addNewExercise">
+			<label for="input_exerciseID" hidden="true" style="position: absolute"></label>
+			<input id="input_exerciseID" class="modifyExercise" type="number" hidden="true"
+				style="position: absolute"></input>
+
+			<label for="input_exerciseName">Name:</label>
+			<br><input id="input_exerciseName" class="modifyExercise" type="text" placeholder="Übungsname"
+				required></input><br>
+
+			<label id="label_input_exerciseDifficulty" for="input_exerciseDifficulty">Schwierigkeit (F1,F2,F3):</label>
+			<br><input id="input_exerciseDifficulty" class="modifyExercise" pattern="[0-9]+([\.,][0-9]+)?" step="0.01"
+				type="number" placeholder="Faktor 1" min="-50" max="5" oninput="validity.valid||(value='');">
+			<input id="input_exerciseDifficulty10" class="modifyExercise" pattern="[0-9]+([\.,][0-9]+)?" step="0.01"
+				type="number" placeholder="Faktor 2" min="-50" max="5" oninput="validity.valid||(value='');">
+			<input id="input_exerciseDifficulty100" class="modifyExercise" pattern="[0-9]+([\.,][0-9]+)?" step="0.01"
+				type="number" placeholder="Faktor 3" min="-50" max="5"
+				oninput="validity.valid||(value='');"></input>
+			<input id="input_paceConstant" class="modifyExercise" disabled="true" pattern="[0-9]+([\.,][0-9]+)?"
+				step="0.001" type="number" placeholder="Pace Konstante" min="0"
+				oninput="validity.valid||(value='');"></input><br>
+
+			<label for="input_exerciseBaseWeight">Basisgewicht:</label>
+			<label for="select_exerciseType">Typ:</label>
+			<label for="select_bothSides">Beidseitig :</label>
+
+
+			<br><input id="input_exerciseBaseWeight" class="modifyExercise" pattern="[0-9]+([\.,][0-9]+)?" step="0.1"
+				type="number" placeholder="Standardgewicht" min="0" oninput="validity.valid||(value='');"></input>
+
+
+			<select id="select_exerciseType" class="modifyExercise">
+				<option value="Cardio">Cardio</option>
+				<option value="Kraft">Kraft</option>
+				<option value="-">-</option>
+				<option value="Strafe">Strafe</option>
+			</select>
+
+			<select id="select_bothSides" class="modifyExercise">
+				<option value="true">Ja</option>
+				<option value="false">Nein</option>
+			</select><br>
+
+
+			<label for="select_exerciseUnit">Einheit:</label>
+			<label for="select_exerciseEquipment">Ausrüstung:</label>
+			<label for="input_exerciseComment">Kommentar:</label>
+			<label for="select_exerciseCalcMethod">Berechnungsmethode:</label>
+
+			<br><select id="select_exerciseUnit" class="modifyExercise">
+				<option value="km">km</option>
+				<option value="m">m</option>
+				<option value="Wdh">Wdh</option>
+				<option value="sec">sec</option>
+				<option value="min">min</option>
+				<option value="h">h</option>
+				<option value="ab 5 Drinks">ab 5 Drinks</option>
+				<option value="pro Drink">pro Drink</option>
+				<option value="pro Tag">pro Tag</option>
+				<option value="pro Tschick">pro Tschick</option>
+			</select>
+
+			<select id="select_exerciseEquipment" class="modifyExercise">
+				<optgroup label="Hanteln/Gewichte">
+					<option value="Langhantel">Langhantel</option>
+					<option value="Hantel">Hantel</option>
+					<option value="2x Hantel">2x Hantel</option>
+					<option value="Gewichtball">Gewichtball</option>
+					<option value="Kettleball">Kettleball</option>
+					<option value="Irgend ein Gewicht">Irgend ein Gewicht</option>
+				</optgroup>
+				<optgroup label="Bänder">
+					<option value="Widerstandsband (Leicht)">Widerstandsband (Leicht)</option>
+					<option value="Widerstandsband (Mittel)">Widerstandsband (Mittel)</option>
+					<option value="Widerstandsband (Schwer)">Widerstandsband (Schwer)</option>
+				</optgroup>
+				<optgroup label="Spezialgeräte/Großgeräte">
+					<option value="Rudergerät">Rudergerät</option>
+					<option value="Fahrrad">Fahrrad</option>
+					<option value="Leg Press Maschine">Leg Press Maschine</option>
+					<option value="Leg Extension">Leg Extension</option>
+					<option value="Lat Pull Down">Lat Pull Down</option>
+					<option value="Kabelzug">Kabelzug</option>
+					<option value="Sprungseil">Sprungseil</option>
+					<option value="Sessel">Sessel</option>
+				</optgroup>
+				<optgroup label="Sonstiges">
+					<option value="Körpergewicht">Körpergewicht</option>
+					<option value="Kein">Kein</option>
+					<option value="Strafe">Strafe</option>
+				</optgroup>
+			</select>
+
+
+			<input id="input_exerciseComment" class="modifyExercise" type="text" placeholder="Kommentarfeld"></input>
+			<select id="select_exerciseCalcMethod" class="modifyExercise">
+					<option value="Standard">Standard</option>
+					<option value="Laufen">Laufen</option>
+					<option value="Liegestütz">Liegestütz</option>
+					<option value="Klettern">Klettern</option>
+					<option value="#1,10,100">#1,10,100</option>
+					<option value="#100,1000,10000">#100,1000,10000</option>
+					<option value="#20,40,80">#20,40,80</option>
+					<option value="#1,10,50">#1,10,50</option>
+					<option value="#10,50,100">#10,50,100</option>
+					<option value="#100,1000,5000">#100,1000,5000</option>
+					<option value="#50,100,150">#50,100,150</option>
+					<option value="#2,20,40">#2,20,40</option>
+					<option value="#12,18,24">#12,18,24</option>
+					<option value="#10,50,150">#10,50,150</option>
+			</select>
+			<br>
+			<br>
+			<button id="button_createExercise">Anlegen</button>
+			<button id="button_modifyExercise">Bearbeiten</button>
+			<button id="button_deleteExercise">Löschen</button>
+			<button id="button_hideExercise">Ausblenden</button>
+			<button id="button_showHiddenExercises">Zeige alle</button>
+
+		</div>
+		<hr>
+		<div id="div_exerciseTable">
+			<table id="table_exerciseTable" class="std_table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+	<div id="div_statistics" class="tab">
+		<div id="div_achievementsDone">
+			<table id="table_achievementsDone" class="std_table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<hr>
+		<div id="div_exerciseStatistics">
+			<br>
+			<label for="select_statisticsExercise">Übung :</label>
+			<select id="select_statisticsExercise"></select>
+			<p id="paragraph_statisticsExercise"></p>
+			<div id="div_graphExercise">
+
+			</div>
+		</div>
+	</div>
+	<div id="div_competition" class="tab">
+		<div id="div_DailyWins">
+			<table id="table_dailyWins" class="std_table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<hr>
+		<div id="div_MonthlyWins">
+			<table id="table_monthlyWins" class="std_table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<hr>
+		<h2>Derzeitig aktive Challenges
+			<button id="button_showFinishedChallenges" class="challengeInput">Zeige beendete</button>
+		</h2>
+		<div id="div_CurrentChallenges">
+
+			
+			
+		</div>
+		<hr>
+		
+		<br>
+		
+		<div id="div_challengeControls">
+			
+			<label for="input_challengeName" class="challengeInput">Challenge Name:</label>
+			<input id="input_challengeName" type="text" class="challengeInput"></input>
+
+			<label for="input_challengeStartDate" class="challengeInput">Challenge Beginn:</label>
+			<input id="input_challengeStartDate" type="date" class="challengeInput"></input>
+
+			<label for="input_challengeEndDate" class="challengeInput">Challenge Ende:</label>
+			<input id="input_challengeEndDate" type="date" class="challengeInput"></input>
+
+			<label for="select_challengeExercise" class="challengeInput">Übung:</label>
+			<select id="select_challengeExercise" class="challengeInput"></select>
+
+			<label for="input_challengeToDo" class="challengeInput">Anzahl Ziel:</label>
+			<input id="input_challengeToDo" type="number" class="challengeInput"></input>
+
+			<button id="button_createChallenge" class="challengeInput">Anlegen</button>
+			
+		</div>
+		<br>
+	</div>
+	<div id="div_events" class="tab">
+		<div id="div_eventLog">
+
+		</div>
+		<div id="div_chatControls">
+			<input id="input_chatText"></input>
+			<button id="button_chatText">Senden</button>
+			<button id="button_link">Link</button>
+			<button id="button_img">Image</button>
+		</div>
+
+	</div>
+
+	<div id="div_profile" class="tab">
+		<label for="input_personalEmailAddress">Email Adresse:</label>
+		<input id="input_personalEmailAddress" type="text" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+			placeholder="herbert@beispiel.com"></input><br>
+		<label for="input_personalColor">Farbe:</label>
+		<input id="input_personalColor" type="color"></input><br>
+		<label for="input_allowEmails">Erlaube Emails:</label>
+		<input id="input_allowEmails" type="checkbox" checked="false"></input><br><br>
+
+		<button id="button_saveProfileData">Speichern</button><br>
+		<hr>
+
+		<p>Achievement Maker</p>
+		<label for="adminSelect_AchievementExercise" class="adminControls">Übung :</label>
+		<select id="adminSelect_AchievementExercise" class="adminControls"> </select><br>
+
+		<label for="adminInput_repsToGetOverall" class="adminControls">Gesamtanzahl:</label>
+		<input id="adminInput_repsToGetOverall" type="text" class="adminControls"><br>
+
+		<label for="adminInput_repsToGetDaily" class="adminControls">Täglich:</label>
+		<input id="adminInput_repsToGetDaily" type="text" class="adminControls"><br>
+
+		<label for="adminInput_repsToGetMonthly" class="adminControls">Monatlich:</label>
+		<input id="adminInput_repsToGetMonthly" type="text" class="adminControls"><br>
+
+		<label for="adminInput_achievementCategory" class="adminControls">Kategorie:</label>
+		<input id="adminInput_achievementCategory" type="text" class="adminControls"><br>
+
+		<button id="adminButton_saveAchievement" class="adminControls">Speichern</button>
+
+		
+	</div>
+
+	<footer>
+		<div id="div_navigation">
+			<button id="button_tabMainPage">Übersicht</button>
+			<button id="button_tabExerciseOverview">Übungen</button>
+			<button id="button_tabPersonalOverview">Eintragen</button>
+			<button id="button_tabStatistics">Erfolge</button>
+			<button id="button_tabCompetition">Siege</button>
+			<button id="button_tabEventLog">Events</button>
+			<button id="button_tabProfile">Profil</button>
+			<input id="input_onlineIndicator" type="textbox" disabled="true">
+			<a href="https://trello.com/invite/b/aZfDB1r0/d9bb40353771097cb89993e31baef54b/fitnessapp"
+				target="_blank">Feedback</a>
+			<a href="#" id="button_logOut" onclick="logout();">Ausloggen</a>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>

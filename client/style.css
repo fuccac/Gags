@@ -1,0 +1,526 @@
+    :root {
+        --mainWidth: 98vw;
+        --mainColor: rgb(194, 214, 245);
+        --tableHeadColor: rgb(38, 78, 39);
+        --tableNthChildColor: rgb(240, 240, 240);
+        --mainFontColor: rgb(0, 0, 0);
+        --mainButtonColor: rgb(187, 198, 228);
+        --mainBorderColor: rgb(0, 0, 0);
+        --mainInputHeight: 1.5vh;
+        --mainInputWidth: 9vw;
+        --mainSelectHeight: 1.8vh;
+        --mainSelectWidth: 9.4vw;
+        --mainFontSize: 11px;
+        --stdTable_td_th_padding:6px;
+        --tab_labelWidth: 10em;
+        --mainButtonWidth: 100px;
+        --mainButtonHeight: 30px;
+        --tableFontsize:11px
+    }
+  
+@media only screen and (max-width: 991px) {
+    :root {
+        --mainWidth: 98vw;
+        --mainColor: rgb(194, 214, 245);
+        --tableHeadColor: rgb(38, 78, 39);
+        --tableNthChildColor: rgb(240, 240, 240);
+        --mainFontColor: rgb(0, 0, 0);
+        --mainButtonColor: rgb(187, 198, 228);
+        --mainBorderColor: rgb(0, 0, 0);
+        --mainInputHeight: 15px;
+        --mainInputWidth: 200px;
+        --mainSelectHeight: 21px;
+        --mainSelectWidth: 204px;
+        --mainFontSize: 11px;
+        --stdTable_td_th_padding:6px;
+        --tab_labelWidth: 10em;
+        --mainButtonWidth: 100px;
+        --mainButtonHeight: 30px;
+        --tableFontsize:10px
+    }
+  }
+
+  @media only screen and (max-width: 759px) {
+    :root {
+        --mainWidth: 98vw;
+        --mainColor: rgb(194, 214, 245);
+        --tableHeadColor: rgb(38, 78, 39);
+        --tableNthChildColor: rgb(240, 240, 240);
+        --mainFontColor: rgb(0, 0, 0);
+        --mainButtonColor: rgb(187, 198, 228);
+        --mainBorderColor: rgb(0, 0, 0);
+        --mainInputHeight: 15px;
+        --mainInputWidth: 150px;
+        --mainSelectHeight: 21px;
+        --mainSelectWidth: 155px;
+        --mainFontSize: 8px;
+        --stdTable_td_th_padding:4px;
+        --tab_labelWidth: 5em;
+        --mainButtonWidth: 80px;
+        --mainButtonHeight: 20px;
+        --tableFontsize:9px
+    }
+  }
+
+  @media only screen and (max-width: 479px) {
+    :root {
+        --mainWidth: 98vw;
+        --mainColor: rgb(194, 214, 245);
+        --tableHeadColor: rgb(38, 78, 39);
+        --tableNthChildColor: rgb(240, 240, 240);
+        --mainFontColor: rgb(0, 0, 0);
+        --mainButtonColor: rgb(187, 198, 228);
+        --mainBorderColor: rgb(0, 0, 0);
+        --mainInputHeight: 15px;
+        --mainInputWidth: 125px;
+        --mainSelectHeight: 21px;
+        --mainSelectWidth: 130px;
+        --mainFontSize: 7px;
+        --stdTable_td_th_padding:3px;
+        --tab_labelWidth: 4em;
+        --mainButtonWidth: 70px;
+        --mainButtonHeight: 15px;
+        --tableFontsize:8px
+    }
+  }
+
+body {
+    font-family: Helvetica, "Trebuchet MS", Arial, sans-serif !important;
+    overflow: hidden;
+    font-size: var(--mainFontSize);
+    zoom: 1;
+    color: var(--mainFontColor);
+}
+
+button:hover {
+    border: 2px solid rgb(150, 150, 150);
+}
+
+/* DIV */
+
+.tab {
+    width: var(--mainWidth);
+    height: 90vh;
+    display: none;
+    background-color: var(--mainColor);
+    border-left: 1px solid var(--mainBorderColor);
+    border-right: 1px solid var(--mainBorderColor);
+    border-top: 1px solid var(--mainBorderColor);
+    overflow: hidden;
+    align-self: center;
+}
+
+#div_changeLog {
+    height: 70%;
+    overflow-y: scroll;
+}
+
+#div_DailyWins{
+    max-height: 25%;
+}
+
+#div_MonthlyWins{
+    max-height: 25%;
+    
+}
+
+#div_challengeControls{
+    max-height: 20%;
+    padding-bottom: 5px;
+    bottom: 10%;
+}
+
+#div_CurrentChallenges{
+    overflow-y: auto;
+    max-height: 35%;
+}
+
+#div_login {
+    color: rgb(0, 51, 0);
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainBorderColor);
+    padding-left: 8px;
+    height: 90vh;
+}
+
+.tab div {
+    width: 99%;
+    padding: 1px;
+    align-items: center;
+    overflow: hidden;
+}
+
+#div_eventLog {
+    max-height: 80%;
+    overflow-y: scroll;
+}
+
+/* TAB MAIN INFO*/
+
+#div_allPlayersTable {
+    max-height: 40%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 5px;
+
+}
+
+#div_graph {
+    background-color: var(--mainColor);
+    height: 50%;
+    padding-left: 3vw;
+    width:93vw;
+}
+
+#div_graphExercise {
+    background-color: var(--mainColor);
+    height: 70%;
+    padding-bottom: 5px;
+}
+
+#div_GraphControl {
+    background-color: var(--mainColor);
+    padding-bottom: 5px;
+}
+
+#div_exerciseStatistics {
+    height: 60%;
+}
+
+#div_exerciseHistory {
+    background-color: var(--mainColor);
+    height: 63%;
+    overflow-y: scroll;
+}
+
+/* TAB EXERCISE OVERVIEW */
+
+#div_addNewExercise {
+    background-color: var(--mainColor);
+}
+
+#div_exerciseTable {
+    background-color: var(--mainColor);
+    height: 60%;
+    top: 25%;
+    overflow-y: scroll;
+}
+
+/* TAB STATISTICS INFO*/
+
+#div_achievementsDone {
+    height: 40%;
+    overflow: auto;
+}
+
+#div_achievementsDone table td div, #div_achievementsToDo table td div {
+    overflow: visible;
+    white-space: nowrap;
+}
+
+#div_achievementsDone table td:first-child, #div_achievementsToDo table td:first-child {
+    width: 20%;
+}
+
+#div_achievementsDone table td, #div_achievementsToDo table td {
+    width: 40%;
+}
+
+#div_achievementsDone table {
+    font-size: 12px;
+}
+
+#div_achievementsDone table td {
+    padding: 1px;
+}
+
+/********************/
+
+#div_navigation {
+    width: var(--mainWidth);
+    min-height: 5vh;
+    height: 5vh;
+    display: none;
+    color: rgb(0, 51, 0);
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainBorderColor);
+    overflow: hidden;
+}
+
+/* INPUTS, SELECTS, BUTTONS */
+
+.tab input {
+    width: var(--mainInputWidth);
+    height: var(--mainInputHeight);
+    background-color: white;
+    margin: 1px;
+}
+
+.tab select {
+    width: var(--mainSelectWidth);
+    height: var(--mainSelectHeight);
+    background-color: white;
+    margin: 1px;
+}
+
+.tab label {
+    display: inline-block;
+    height: 10px;
+    width: var(--tab_labelWidth);
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+#div_addNewExercise label {
+    width: 200px;
+}
+
+.tab button {
+    background-color: var(--mainButtonColor);
+    text-align: center;
+    font-size: var(--mainFontSize);
+    width: var(--mainButtonWidth);
+    height: var(--mainButtonHeight);
+}
+
+#div_navigation button {
+    background-color: var(--mainButtonColor);
+    text-align: center;
+    font-size: var(--mainFontSize);
+    margin: 0.1%;
+    width: 8%;
+    height: 90%;
+    min-width: 5%;
+    min-height: 90%;
+    padding: 1px;
+}
+
+#button_logOut {
+    float: right;
+    padding-top: 15px;
+}
+
+/* CANVAS */
+
+#canvas_graphHistory {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--mainBorderColor);
+}
+
+/* TABLES */
+
+.deleteButton:hover {
+    background: rgb(202, 111, 95);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hiddenExercise {
+    color: rgb(252, 0, 0);
+}
+
+.std_table {
+    font-family: Helvetica, "Trebuchet MS", Arial, sans-serif;
+    font-size: var(--mainFontSize);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.std_table td, .std_table th {
+    border: 1px solid rgb(221, 221, 211);
+    padding: var(--stdTable_td_th_padding);;
+}
+
+.std_table td:first-child {
+    text-align: left;
+}
+
+.std_table thead tr td {
+    background: var(--tableHeadColor);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    font-size: var(--tableFontsize);
+}
+
+.std_table thead tr td.hiddenCell {
+    position: absolute;
+}
+
+.selected {
+    background: rgb(107, 156, 115)!important;
+    font-weight: bold;
+}
+
+.std_table tr:nth-child(even) {
+    background-color: var(--tableNthChildColor);
+}
+
+.std_table thead tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(38, 78, 39);
+    color: white;
+}
+
+#table_monthlyWins thead tr td {
+    width: 50%
+}
+
+#table_dailyWins thead tr td {
+    width: 50%
+}
+
+/* OTHER CLASSES */
+
+.challengeInput button{
+    width: 10vw !important;
+    height: var(--mainInputHeight) !important;
+    margin: 1px !important;
+}
+
+.challengeInput select{
+    width: 10vw !important;
+    height: var(--mainInputHeight) !important;
+    margin: 1px !important;
+}
+
+
+.challengeInput input{
+    width: 10vw !important;
+    height: var(--mainInputHeight) !important;
+    margin: 1px !important;
+}
+
+.challengeInput label{
+    width: 9vw !important;
+    height: var(--mainInputHeight) !important;
+    margin: 1px !important;
+}
+
+.challengeProgress{
+    height: 2vh;
+    width: 40vw;
+}
+
+.headPara {
+    font-size: 18px;
+}
+
+.stdPara {
+    font-size: 14px;
+}
+
+.changeLog_Feature {
+    font-weight: bold;
+    color: rgb(42, 136, 29);
+}
+
+.changeLog_Bug {
+    font-weight: bold;
+    color: rgb(179, 49, 49);
+}
+
+.negative {
+    color: rgb(255, 0, 0);
+}
+
+.today {
+    color: rgb(30, 117, 38);
+    font-weight: bold;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.tableTooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgb(112, 108, 107);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    width: 10vw;
+    padding: 5px 0px;
+    right: 10vh;
+    top: 10vh;
+    opacity: 0.90;
+    font-size: var(--mainFontSize);
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    font-family: Helvetica, "Trebuchet MS", Arial, sans-serif;
+}
+
+.tableTooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.inputToolTip .tooltiptext {
+    visibility: hidden;
+    background-color: rgb(112, 108, 107);
+    color: #fff;
+    text-align: left;
+    width: 10vw;
+    padding: 5px 0px;
+    right: 10vw;
+    top: 10vh;
+    opacity: 0.90;
+    font-size: var(--mainFontSize);
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    overflow: auto;
+    font-family: Helvetica, "Trebuchet MS", Arial, sans-serif;
+}
+
+.inputToolTip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.notEarned {
+    color: rgb(255, 0, 0);
+    font-style: italic;
+}
+
+.hiddenCell {
+    visibility: hidden;
+    position: absolute;
+}
+
+#input_chatText {
+    width: 50%;
+}
+
+
+#input_onlineIndicator{
+    width: 400px;
+    font-size: 10px;
+    color: rgb(12, 134, 12);
+}
+
+.inactive{
+    color: rgb(143, 151, 143);
+    font-style: italic;
+}
+
+.firstClass{
+    color: rgb(132, 49, 170);
+    font-weight: bolder;
+}
+
+.secondClass{
+    color: rgb(40, 49, 179);
+
+}
+
+.MOTD{
+    font-size: 2vh;
+    color: rgb(183, 50, 201);
+}
+
+.changelog{
+    font-size: 1vh;
+    color: rgb(0, 0, 0);
+}
